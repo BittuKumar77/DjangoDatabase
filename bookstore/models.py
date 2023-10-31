@@ -9,4 +9,8 @@ class bookdata(models.Model):
     category = models.CharField(max_length=20)       
     author = models.CharField(max_length=50)
     price = models.IntegerField()
-    best_seller = models.BooleanField(default=False)                                    
+    best_seller = models.BooleanField(default=False)    
+
+    def __str__(self):
+        return f"{self.bname} {self.author} {self.price} {self.best_seller}"                                
+
