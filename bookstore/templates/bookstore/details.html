@@ -1,0 +1,19 @@
+{% extends "bookstore/base.html" %}
+
+{% block title %}BookDetails{% endblock title %}
+
+{% block content %}
+    <center>
+        <ul>
+            <li>Title:{{title}}</li>
+            <li>Category:{{category}}</li>
+            <li>Price:{{price}}</li>
+            <li>Author:{{author}}</li>
+            <li>Ratings:{{ratings}}</li>
+            {% if best_seller %}
+                <h6 style="color:green">Is Best Seller</h6>
+            {% endif %}
+        </ul>
+    </center>
+{% endblock content %}
+    

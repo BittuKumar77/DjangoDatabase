@@ -1,0 +1,12 @@
+
+{% extends "bookstore/base.html" %}
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+    {% for i in books %}
+        <ul>
+            <li><a href="{% url "books:book-details" i.id %}">{{i.slug}}</a></li>
+        </ul>
+    {% endfor %}
+{% endblock content %}
+
